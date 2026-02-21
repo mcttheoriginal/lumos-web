@@ -71,12 +71,17 @@
             padding: 0 20px;
         }
 
-        /* Ortadaki Logo Alanı */
+        /* Ortadaki Logo İçin Zorlayıcı CSS */
         .hero-logo {
-            max-width: 300px; /* Ortadaki logonun genişliği */
-            height: auto;
+            width: 100%;
+            max-width: 300px !important;
+            height: auto !important;
+            min-height: 50px;
             margin-bottom: 20px;
-            filter: brightness(0) invert(1); /* Siyah logoyu beyaza çevirir, arka planda görünmesi için */
+            display: block !important;
+            filter: brightness(0) invert(1) !important; /* Logoyu beyaza çevirir */
+            opacity: 1 !important;
+            visibility: visible !important;
         }
 
         .hero p { 
@@ -86,6 +91,7 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
+            margin: 10px 0;
         }
 
         /* Bölümler */
@@ -130,6 +136,7 @@
             letter-spacing: 2px;
             transition: 0.3s;
             margin-top: 30px;
+            display: inline-block;
         }
 
         .btn:hover { background: var(--accent); color: var(--primary); }
