@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a; /* Logona uygun derin siyah */
-            --accent: #d4af37;  /* Mühendislik ağırlıklı mat altın tonu */
+            --primary: #1a1a1a; 
+            --accent: #d4af37;  
             --light: #ffffff;
             --text: #333;
             --gray: #f4f4f4;
@@ -72,15 +72,11 @@
         }
 
         /* Ortadaki Logo Alanı */
-        .hero-logo-container {
-            margin-bottom: 25px;
-        }
-
         .hero-logo {
-            max-width: 280px; 
+            max-width: 300px; /* Ortadaki logonun genişliği */
             height: auto;
-            /* Siyah logoyu beyaza çevirir ve parlatır */
-            filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1); /* Siyah logoyu beyaza çevirir, arka planda görünmesi için */
         }
 
         .hero p { 
@@ -90,7 +86,6 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
-            margin: 10px 0 30px 0;
         }
 
         /* Bölümler */
@@ -134,6 +129,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.3s;
+            margin-top: 30px;
         }
 
         .btn:hover { background: var(--accent); color: var(--primary); }
@@ -153,11 +149,9 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-logo-container">
-            <img src="logo.png" alt="Lumos Logo" class="hero-logo">
-        </div>
+        <img src="logo.png" alt="Lumos Logo" class="hero-logo">
         <p>Aydınlatma ve Mühendislikte Geleceğin Çözümleri</p>
-        <a href="#hizmetler" class="btn">Projelerimizi Keşfedin</a>
+        <a href="#hizmetler" class="btn">Keşfedin</a>
     </section>
 
     <section id="hakkimizda" class="section">
