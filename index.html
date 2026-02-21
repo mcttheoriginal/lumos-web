@@ -36,10 +36,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .nav-logo img {
-            height: 35px;
-            display: block;
-        }
+        .nav-logo img { height: 35px; display: block; }
 
         .nav-links a {
             color: var(--primary);
@@ -58,8 +55,8 @@
         /* Hero Bölümü */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                        url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=80&w=2070');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -71,17 +68,12 @@
             padding: 0 20px;
         }
 
-        /* Ortadaki Logo İçin Zorlayıcı CSS */
         .hero-logo {
-            width: 100%;
-            max-width: 300px !important;
-            height: auto !important;
-            min-height: 50px;
+            max-width: 300px;
+            height: auto;
             margin-bottom: 20px;
             display: block !important;
-            filter: brightness(0) invert(1) !important; /* Logoyu beyaza çevirir */
-            opacity: 1 !important;
-            visibility: visible !important;
+            filter: brightness(0) invert(1);
         }
 
         .hero p { 
@@ -91,10 +83,47 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
-            margin: 10px 0;
+            margin: 10px 0 30px 0;
         }
 
-        /* Bölümler */
+        /* İletişim Formu Tasarımı */
+        .contact-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: var(--gray);
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-container input, .contact-container textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .contact-container button {
+            background: var(--primary);
+            color: white;
+            border: 1px solid var(--accent);
+            padding: 15px 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .contact-container button:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* Standart Bölümler */
         .section { padding: 100px 10%; text-align: center; }
         .grid {
             display: grid;
@@ -117,8 +146,6 @@
             border-color: var(--accent);
         }
 
-        .card h3 { font-family: 'Montserrat', sans-serif; margin-bottom: 15px; }
-
         footer {
             background: var(--primary);
             color: white;
@@ -135,7 +162,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.3s;
-            margin-top: 30px;
             display: inline-block;
         }
 
@@ -158,7 +184,7 @@
     <section class="hero">
         <img src="logo.png" alt="Lumos Logo" class="hero-logo">
         <p>Aydınlatma ve Mühendislikte Geleceğin Çözümleri</p>
-        <a href="#hizmetler" class="btn">Keşfedin</a>
+        <a href="#iletisim" class="btn">Hemen Teklif Alın</a>
     </section>
 
     <section id="hakkimizda" class="section">
@@ -188,9 +214,24 @@
         </div>
     </section>
 
-    <footer id="iletisim">
-        <p style="letter-spacing: 2px; font-weight: 300;">BİZİMLE ÇALIŞIN</p>
-        <p style="font-size: 1.8rem; color: var(--accent); margin: 10px 0;">info@lumoslc.com</p>
+    <section id="iletisim" class="section">
+        <h2 style="font-family: Montserrat; font-weight: 300; text-transform: uppercase; letter-spacing: 3px;">Bize Ulaşın</h2>
+        <div style="width: 50px; height: 2px; background: var(--accent); margin: 20px auto;"></div>
+        <p>Projeniz için ücretsiz danışmanlık ve teklif alın.</p>
+        
+        <div class="contact-container">
+            <form action="https://formspree.io/f/info@lumoslc.com" method="POST">
+                <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+                <input type="email" name="_replyto" placeholder="E-posta Adresiniz" required>
+                <textarea name="message" rows="5" placeholder="Projeniz hakkında kısa bilgi..." required></textarea>
+                <button type="submit">Mesaj Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p style="letter-spacing: 2px; font-weight: 300;">LUMOS AYDINLATMA & MÜHENDİSLİK</p>
+        <p style="font-size: 1.2rem; color: var(--accent); margin: 10px 0;">info@lumoslc.com</p>
         <p style="opacity: 0.6; font-size: 0.8rem; margin-top: 40px;">&copy; 2026 Lumos Aydınlatma ve Mühendislik. Tüm hakları saklıdır.</p>
     </footer>
 
